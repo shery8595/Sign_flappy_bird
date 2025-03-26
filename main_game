@@ -43,7 +43,7 @@ ground = pygame.image.load(r"D:\ground.png")
 class Bird(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(r"D:\avatar (9).png")  # Load your single bird image
+        self.image = pygame.image.load(r"D:\sign_bird.png")  # Load your single bird image
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
         self.vel = 0
@@ -67,9 +67,9 @@ class Bird(pygame.sprite.Sprite):
 
         # Rotate the bird based on velocity
         if game_over == False:
-            self.image = pygame.transform.rotate(pygame.image.load(r"D:\avatar (9).png"), self.vel * -2)
+            self.image = pygame.transform.rotate(pygame.image.load(r"D:\sign_bird.png"), self.vel * -2)
         else:
-            self.image = pygame.transform.rotate(pygame.image.load(r"D:\avatar (9).png"), -90)
+            self.image = pygame.transform.rotate(pygame.image.load(r"D:\sign_bird.png"), -90)
 
 class Pipe(pygame.sprite.Sprite):
     def __init__(self, x, y, position):
